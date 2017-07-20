@@ -8,49 +8,52 @@
 
 import Foundation
 import UIKit
+import NotificationCenter
 
 @IBDesignable
 class YVTextField: UITextField {
     
     // MARK: - IBInspectables
     
-    @IBInspectable var smallPlaceholder: String = "" {
+    @IBInspectable public var smallPlaceholder: String = "" {
         didSet {
             smallPlaceholderLabel.text = smallPlaceholder
         }
     }
     
-    @IBInspectable var smallPlaceholderColor: UIColor = .lightGray {
+    @IBInspectable public var smallPlaceholderColor: UIColor = .lightGray {
         didSet {
             smallPlaceholderLabel.textColor = smallPlaceholderColor
         }
     }
     
-    @IBInspectable var cornerRadius: CGFloat = 0 {
+    @IBInspectable public var cornerRadius: CGFloat = 0 {
         didSet {
             layer.cornerRadius = cornerRadius
         }
     }
     
-    @IBInspectable var borderWidth: CGFloat = 0 {
+    @IBInspectable public var borderWidth: CGFloat = 0 {
         didSet {
             layer.borderWidth = borderWidth
         }
     }
     
-    @IBInspectable var borderColor: UIColor =  .clear {
+    @IBInspectable public var borderColor: UIColor =  .clear {
         didSet {
             layer.borderColor = borderColor.cgColor
         }
     }
     
-    @IBInspectable var leftTextOffset: CGFloat = 0 {
+    @IBInspectable public var leftTextOffset: CGFloat = 0 {
         didSet {
             let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: leftTextOffset, height: frame.height))
             leftView = paddingView
             leftViewMode = .always
         }
     }
+    
+    @IBInspectable public var verticalPadding: CGFloat = 0
     
     // MARK: - Views
     
@@ -76,18 +79,34 @@ class YVTextField: UITextField {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        smallPlaceholderLabel.frame = CGRect(x: leftTextOffset, y: -14, width: frame.width, height: 14)
+        smallPlaceholderLabel.frame = CGRect(x: leftTextOffset, y: -verticalPadding, width: frame.width, height: 14)
     }
     
     fileprivate func setupView() {
         clipsToBounds = false
         
+        setupObservers()
+        
         setupConstraints()
+    }
+    
+    fileprivate func setupObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(textFieldTextDidEndEditing), name: .UITextFieldTextDidEndEditing, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(textFieldTextDidBeginEditing), name: .UITextFieldTextDidBeginEditing, object: nil)
     }
     
     fileprivate func setupConstraints() {
         addSubview(smallPlaceholderLabel)
         
+    }
+    
+    //MARK: - TextField Editing Observer
+    func textFieldTextDidEndEditing(notification : NSNotification) {
+        smallPlaceholderLabel.textColor = .blue
+    }
+    
+    func textFieldTextDidBeginEditing(notification : NSNotification) {
+        smallPlaceholderLabel.textColor = .red
     }
     
 }

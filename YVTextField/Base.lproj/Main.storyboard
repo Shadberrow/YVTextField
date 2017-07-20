@@ -43,6 +43,9 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="smallPlaceholderColor">
                                         <color key="value" red="0.77123277840000004" green="1" blue="0.57248151810000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="verticalPadding">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                         </subviews>
