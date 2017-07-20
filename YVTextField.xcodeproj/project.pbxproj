@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		6DAB1D561F20D6F900050DE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAB1D551F20D6F900050DE9 /* AppDelegate.swift */; };
-		6DAB1D581F20D6F900050DE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAB1D571F20D6F900050DE9 /* ViewController.swift */; };
 		6DAB1D5B1F20D6F900050DE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DAB1D591F20D6F900050DE9 /* Main.storyboard */; };
 		6DAB1D5D1F20D6F900050DE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DAB1D5C1F20D6F900050DE9 /* Assets.xcassets */; };
 		6DAB1D601F20D6F900050DE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DAB1D5E1F20D6F900050DE9 /* LaunchScreen.storyboard */; };
+		6DAB1D681F20D9EF00050DE9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAB1D671F20D9EF00050DE9 /* MainViewController.swift */; };
+		6DAB1D6C1F20DBE100050DE9 /* YVTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAB1D6B1F20DBE100050DE9 /* YVTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6DAB1D521F20D6F900050DE9 /* YVTextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YVTextField.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DAB1D551F20D6F900050DE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6DAB1D571F20D6F900050DE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6DAB1D5A1F20D6F900050DE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6DAB1D5C1F20D6F900050DE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6DAB1D5F1F20D6F900050DE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6DAB1D611F20D6F900050DE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DAB1D671F20D9EF00050DE9 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		6DAB1D6B1F20DBE100050DE9 /* YVTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YVTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +57,30 @@
 			isa = PBXGroup;
 			children = (
 				6DAB1D551F20D6F900050DE9 /* AppDelegate.swift */,
-				6DAB1D571F20D6F900050DE9 /* ViewController.swift */,
 				6DAB1D591F20D6F900050DE9 /* Main.storyboard */,
+				6DAB1D6A1F20DBC600050DE9 /* Controllers */,
+				6DAB1D691F20DBA100050DE9 /* YVTextFieldSource */,
 				6DAB1D5C1F20D6F900050DE9 /* Assets.xcassets */,
 				6DAB1D5E1F20D6F900050DE9 /* LaunchScreen.storyboard */,
 				6DAB1D611F20D6F900050DE9 /* Info.plist */,
 			);
 			path = YVTextField;
+			sourceTree = "<group>";
+		};
+		6DAB1D691F20DBA100050DE9 /* YVTextFieldSource */ = {
+			isa = PBXGroup;
+			children = (
+				6DAB1D6B1F20DBE100050DE9 /* YVTextField.swift */,
+			);
+			name = YVTextFieldSource;
+			sourceTree = "<group>";
+		};
+		6DAB1D6A1F20DBC600050DE9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6DAB1D671F20D9EF00050DE9 /* MainViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DAB1D581F20D6F900050DE9 /* ViewController.swift in Sources */,
 				6DAB1D561F20D6F900050DE9 /* AppDelegate.swift in Sources */,
+				6DAB1D681F20D9EF00050DE9 /* MainViewController.swift in Sources */,
+				6DAB1D6C1F20DBE100050DE9 /* YVTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +282,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CHF3A78536;
 				INFOPLIST_FILE = YVTextField/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.shadberrow.YVTextField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -275,6 +296,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CHF3A78536;
 				INFOPLIST_FILE = YVTextField/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.shadberrow.YVTextField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
