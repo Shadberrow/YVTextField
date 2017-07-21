@@ -27,6 +27,18 @@ class YVTextField: UITextField {
         }
     }
     
+    @IBInspectable public var separatorLineViewColor: UIColor = .black {
+        didSet {
+            separatorLineView.backgroundColor = separatorLineViewColor
+        }
+    }
+    
+    @IBInspectable public var isSeparatorHidden: Bool = false {
+        didSet {
+            separatorLineView.isHidden = isSeparatorHidden
+        }
+    }
+    
     @IBInspectable public var cornerRadius: CGFloat = 0 {
         didSet {
             layer.cornerRadius = cornerRadius
@@ -64,6 +76,11 @@ class YVTextField: UITextField {
         return label
     }()
     
+    fileprivate lazy var separatorLineView: UIView = {
+        let view = UIView()
+        return view
+    }()
+    
     // MARK: - Initialization
     
     override init(frame: CGRect) {
@@ -79,7 +96,10 @@ class YVTextField: UITextField {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        smallPlaceholderLabel.frame = CGRect(x: self.leftTextOffset, y: -self.verticalPadding, width: self.frame.width, height: 14)
+        smallPlaceholderLabel.frame = CGRect(x: leftTextOffset, y: -verticalPadding, width: frame.width, height: 14)
+        separatorLineView.frame = CGRect(x: 0, y: frame.height, width: frame.width, height: 1)
+        
+        hideSmallPlaceholder()
     }
     
     deinit {
@@ -90,29 +110,46 @@ class YVTextField: UITextField {
     
     fileprivate func setupView() {
         clipsToBounds = false
-        
         setupObservers()
-        
-        setupConstraints()
+        setupSubviews()
     }
     
     fileprivate func setupObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(textFieldTextDidEndEditing), name: .UITextFieldTextDidEndEditing, object: self)
         NotificationCenter.default.addObserver(self, selector: #selector(textFieldTextDidBeginEditing), name: .UITextFieldTextDidBeginEditing, object: self)
+//        NotificationCenter.default.addObserver(self, selector: #selector(textFieldTextDidBeginEditing), name: .UITextFieldTextDidChange, object: self)
     }
     
-    fileprivate func setupConstraints() {
+    fileprivate func setupSubviews() {
         addSubview(smallPlaceholderLabel)
-        
+        addSubview(separatorLineView)
     }
     
-    //MARK: - TextField Editing Observer
+    // MARK: - TextField Editing Observer
     func textFieldTextDidEndEditing(notification : NSNotification) {
         smallPlaceholderLabel.textColor = .blue
+        hideSmallPlaceholder()
     }
     
     func textFieldTextDidBeginEditing(notification : NSNotification) {
         smallPlaceholderLabel.textColor = .red
+        showSmallPlaceholder()
+    }
+    
+    // MARK: - Animations
+    
+    fileprivate func hideSmallPlaceholder() {
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: { 
+            self.smallPlaceholderLabel.transform = CGAffineTransform(translationX: 0, y: self.smallPlaceholderLabel.frame.height)
+            self.smallPlaceholderLabel.alpha = 0
+        }, completion: nil)
+    }
+    
+    fileprivate func showSmallPlaceholder() {
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            self.smallPlaceholderLabel.transform = .identity
+            self.smallPlaceholderLabel.alpha = 1
+        }, completion: nil)
     }
     
 }
