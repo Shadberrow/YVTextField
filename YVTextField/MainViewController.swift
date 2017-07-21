@@ -23,6 +23,8 @@ class MainViewController: UIViewController {
         lastNameTF.delegate = self
         descriptionTF.delegate = self
         
+        
+        
     }
 
     func endEdit() {
@@ -34,14 +36,6 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITextFieldDelegate {
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if textField != descriptionTF { return true }
-        if textField.text!.characters.count < 3 || !textField.text!.contains("@") {
-            (textField as! YVTextField).errorMessage = "Enter email"
-        } else {
-            (textField as! YVTextField).errorMessage = ""
-        }
-        return true
-    }
+    
     
 }
