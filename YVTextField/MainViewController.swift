@@ -20,6 +20,7 @@ class MainViewController: UIViewController {
         
         firstNameTF.delegate = self
         lastNameTF.delegate = self
+        
     }
 
     func endEdit() {

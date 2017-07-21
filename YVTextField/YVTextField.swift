@@ -10,31 +10,39 @@ import Foundation
 import UIKit
 import NotificationCenter
 
-@IBDesignable
-class YVTextField: UITextField {
+@IBDesignable class YVTextField: UITextField {
     
     // MARK: - IBInspectables
-    
     @IBInspectable public var smallPlaceholder: String = "" {
         didSet {
             smallPlaceholderLabel.text = smallPlaceholder
         }
     }
     
+    //
     @IBInspectable public var smallPlaceholderColor: UIColor = .lightGray {
         didSet {
             smallPlaceholderLabel.textColor = smallPlaceholderColor
         }
     }
     
+    public var smallPlaceholderFont: UIFont = UIFont.systemFont(ofSize: 12) {
+        didSet {
+            smallPlaceholderLabel.font = smallPlaceholderFont
+        }
+    }
+    
+    // Width between textfield top and small separator top
     @IBInspectable public var smallPlaceholderPadding: CGFloat = 7
     
+    // Color of the main placeholder text
     @IBInspectable public var placeholderColor: UIColor = .gray {
         didSet {
             setPlaceholderColor(to: placeholderColor)
         }
     }
     
+    // Color of the separator line view
     @IBInspectable public var separatorLineViewColor: UIColor = .black {
         didSet {
             separatorLineView.backgroundColor = separatorLineViewColor
@@ -47,7 +55,7 @@ class YVTextField: UITextField {
     
     @IBInspectable public var separatorHidden: Bool = false {
         didSet {
-            separatorLineView.alpha = separatorHidden ? 0 : 1
+            separatorLineView.isHidden = separatorHidden
         }
     }
     
@@ -82,12 +90,14 @@ class YVTextField: UITextField {
     fileprivate lazy var smallPlaceholderLabel: UILabel = {
         let label = UILabel()
         label.textColor = self.textColor
-        label.font = UIFont.systemFont(ofSize: 12)
+        label.font = self.smallPlaceholderFont
         return label
     }()
     
     fileprivate lazy var separatorLineView: UIView = {
         let view = UIView()
+        view.backgroundColor = self.separatorLineViewColor
+        view.isHidden = self.separatorHidden
         return view
     }()
     
@@ -108,10 +118,14 @@ class YVTextField: UITextField {
         
         clipsToBounds = false
         
+        if font == nil { return }
+        
+        smallPlaceholderFont = UIFont.systemFont(ofSize: self.font!.pointSize * 0.7)
+        
         smallPlaceholderLabel.frame = CGRect(x: leftTextOffset,
                                              y: -smallPlaceholderPadding,
                                              width: frame.width,
-                                             height: 14)
+                                             height: font!.pointSize * 1.1)
         
         separatorLineView.frame     = CGRect(x: separatorLeftPadding,
                                              y: frame.height - separatorBottomPadding,
@@ -145,10 +159,6 @@ class YVTextField: UITextField {
         addSubview(separatorLineView)
     }
     
-    fileprivate func setPlaceholderColor(to: UIColor) {
-        attributedPlaceholder = NSAttributedString(string: placeholder!, attributes: [NSForegroundColorAttributeName: to])
-    }
-    
     // MARK: - TextField Editing Observer
     
     func textFieldTextDidEndEditing(notification : NSNotification) {
@@ -165,7 +175,6 @@ class YVTextField: UITextField {
     }
     
     // MARK: - Animations
-    
     fileprivate func hideSmallPlaceholder() {
         UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.smallPlaceholderLabel.transform = CGAffineTransform(translationX: 0, y: self.smallPlaceholderLabel.frame.height)
@@ -178,6 +187,11 @@ class YVTextField: UITextField {
             self.smallPlaceholderLabel.transform = .identity
             self.smallPlaceholderLabel.alpha = 1
         }, completion: nil)
+    }
+    
+    // MARK: - Helpers
+    fileprivate func setPlaceholderColor(to: UIColor) {
+        attributedPlaceholder = NSAttributedString(string: placeholder!, attributes: [NSForegroundColorAttributeName: to])
     }
     
 }
