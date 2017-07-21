@@ -14,11 +14,21 @@ import NotificationCenter
     
     private var isPlaceholderHidden = false
     
+    public var errorColor: UIColor = #colorLiteral(red: 0.9046222586, green: 0.06288693374, blue: 0.1854852713, alpha: 1)
+    
+    public var errorMessage: String? {
+        didSet {
+            if errorMessage!.isEmpty { return }
+            smallPlaceholderLabel.text = errorMessage
+            smallPlaceholderLabel.textColor = errorColor
+        }
+    }
+    
     // MARK: - IBInspectables
     
-    @IBInspectable public var smallPlaceholder: String = "" {
+    @IBInspectable public var smallPlaceholderText: String = "" {
         didSet {
-            smallPlaceholderLabel.text = smallPlaceholder
+            smallPlaceholderLabel.text = smallPlaceholderText
         }
     }
     
@@ -179,7 +189,10 @@ import NotificationCenter
     }
     
     func textFieldTextChanged(notifcation: NSNotification) {
-        smallPlaceholderLabel.textColor = smallPlaceholderColor
+        if !(errorMessage != nil && !errorMessage!.isEmpty) {
+            smallPlaceholderLabel.text = smallPlaceholderText
+            smallPlaceholderLabel.textColor = smallPlaceholderColor
+        }
     }
     
     // MARK: - Animations
@@ -212,10 +225,10 @@ import NotificationCenter
         attributedPlaceholder = NSAttributedString(string: placeholder!, attributes: [NSForegroundColorAttributeName: to])
     }
     
-    public var wrongInputColor: UIColor = #colorLiteral(red: 0.9046222586, green: 0.06288693374, blue: 0.1854852713, alpha: 1)
+    // MSRK: - Public methods
     
     public func wrongInput() {
-        smallPlaceholderLabel.textColor = wrongInputColor
+        smallPlaceholderLabel.textColor = errorColor
     }
     
 }

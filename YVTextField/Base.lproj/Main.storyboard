@@ -25,7 +25,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.36434948361543246" green="0.74057112068965525" blue="0.41616767344521649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="smallPlaceholder" value="First name"/>
@@ -48,12 +48,13 @@
                                         <real key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="smallPlaceholderPadding">
-                                        <real key="value" value="5"/>
+                                        <real key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="separatorHidden" value="NO"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="leftTextOffset">
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="smallPlaceholderText" value="First name"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your surname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bkA-sc-9fG" customClass="YVTextField" customModule="YVTextField" customModuleProvider="target">
@@ -61,7 +62,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.36434948360000002" green="0.74057112069999997" blue="0.41616767339999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="smallPlaceholder" value="Last name"/>
@@ -84,12 +85,13 @@
                                         <real key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="smallPlaceholderPadding">
-                                        <real key="value" value="5"/>
+                                        <real key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="separatorHidden" value="NO"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="leftTextOffset">
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="smallPlaceholderText" value="Last name"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Some fancy field" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lfF-aJ-4xd" customClass="YVTextField" customModule="YVTextField" customModuleProvider="target">
@@ -106,6 +108,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="smallPlaceholderPadding">
                                         <real key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="smallPlaceholderText" value="About you"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                         </subviews>
