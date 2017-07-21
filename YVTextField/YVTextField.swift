@@ -27,15 +27,27 @@ class YVTextField: UITextField {
         }
     }
     
+    @IBInspectable public var smallPlaceholderPadding: CGFloat = 7
+    
+    @IBInspectable public var placeholderColor: UIColor = .gray {
+        didSet {
+            setPlaceholderColor(to: placeholderColor)
+        }
+    }
+    
     @IBInspectable public var separatorLineViewColor: UIColor = .black {
         didSet {
             separatorLineView.backgroundColor = separatorLineViewColor
         }
     }
     
-    @IBInspectable public var isSeparatorHidden: Bool = false {
+    @IBInspectable public var separatorLeftPadding: CGFloat = 0
+    @IBInspectable public var separatorRightadding: CGFloat = 0
+    @IBInspectable public var separatorBottomPadding: CGFloat = 0
+    
+    @IBInspectable public var separatorHidden: Bool = false {
         didSet {
-            separatorLineView.isHidden = isSeparatorHidden
+            separatorLineView.alpha = separatorHidden ? 0 : 1
         }
     }
     
@@ -64,8 +76,6 @@ class YVTextField: UITextField {
             leftViewMode = .always
         }
     }
-    
-    @IBInspectable public var verticalPadding: CGFloat = 0
     
     // MARK: - Views
     
@@ -96,8 +106,17 @@ class YVTextField: UITextField {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        smallPlaceholderLabel.frame = CGRect(x: leftTextOffset, y: -verticalPadding, width: frame.width, height: 14)
-        separatorLineView.frame = CGRect(x: 0, y: frame.height, width: frame.width, height: 1)
+        clipsToBounds = false
+        
+        smallPlaceholderLabel.frame = CGRect(x: leftTextOffset,
+                                             y: -smallPlaceholderPadding,
+                                             width: frame.width,
+                                             height: 14)
+        
+        separatorLineView.frame     = CGRect(x: separatorLeftPadding,
+                                             y: frame.height - separatorBottomPadding,
+                                             width: frame.width - separatorLeftPadding - separatorRightadding,
+                                             height: 1)
         
         hideSmallPlaceholder()
     }
@@ -110,6 +129,7 @@ class YVTextField: UITextField {
     
     fileprivate func setupView() {
         clipsToBounds = false
+        
         setupObservers()
         setupSubviews()
     }
@@ -125,21 +145,29 @@ class YVTextField: UITextField {
         addSubview(separatorLineView)
     }
     
+    fileprivate func setPlaceholderColor(to: UIColor) {
+        attributedPlaceholder = NSAttributedString(string: placeholder!, attributes: [NSForegroundColorAttributeName: to])
+    }
+    
     // MARK: - TextField Editing Observer
+    
     func textFieldTextDidEndEditing(notification : NSNotification) {
-        smallPlaceholderLabel.textColor = .blue
-        hideSmallPlaceholder()
+        guard let text = text else { return }
+        if text.isEmpty {
+            hideSmallPlaceholder()
+            setPlaceholderColor(to: placeholderColor)
+        }
     }
     
     func textFieldTextDidBeginEditing(notification : NSNotification) {
-        smallPlaceholderLabel.textColor = .red
         showSmallPlaceholder()
+        setPlaceholderColor(to: .clear)
     }
     
     // MARK: - Animations
     
     fileprivate func hideSmallPlaceholder() {
-        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: { 
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.smallPlaceholderLabel.transform = CGAffineTransform(translationX: 0, y: self.smallPlaceholderLabel.frame.height)
             self.smallPlaceholderLabel.alpha = 0
         }, completion: nil)
