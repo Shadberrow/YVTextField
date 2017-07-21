@@ -12,14 +12,17 @@ import NotificationCenter
 
 @IBDesignable class YVTextField: UITextField {
     
+    private var isPlaceholderHidden = false
+    
     // MARK: - IBInspectables
+    
     @IBInspectable public var smallPlaceholder: String = "" {
         didSet {
             smallPlaceholderLabel.text = smallPlaceholder
         }
     }
     
-    //
+    ///
     @IBInspectable public var smallPlaceholderColor: UIColor = .lightGray {
         didSet {
             smallPlaceholderLabel.textColor = smallPlaceholderColor
@@ -32,17 +35,17 @@ import NotificationCenter
         }
     }
     
-    // Width between textfield top and small separator top
+    /// Width between textfield top and small separator top
     @IBInspectable public var smallPlaceholderPadding: CGFloat = 7
     
-    // Color of the main placeholder text
+    /// Color of the main placeholder text
     @IBInspectable public var placeholderColor: UIColor = .gray {
         didSet {
             setPlaceholderColor(to: placeholderColor)
         }
     }
     
-    // Color of the separator line view
+    /// Color of the separator line view
     @IBInspectable public var separatorLineViewColor: UIColor = .black {
         didSet {
             separatorLineView.backgroundColor = separatorLineViewColor
@@ -91,6 +94,7 @@ import NotificationCenter
         let label = UILabel()
         label.textColor = self.textColor
         label.font = self.smallPlaceholderFont
+        label.textColor = self.smallPlaceholderColor
         return label
     }()
     
@@ -120,17 +124,17 @@ import NotificationCenter
         
         if font == nil { return }
         
-        smallPlaceholderFont = UIFont.systemFont(ofSize: self.font!.pointSize * 0.7)
+        smallPlaceholderFont = UIFont.systemFont(ofSize: font!.pointSize * 0.7)
         
         smallPlaceholderLabel.frame = CGRect(x: leftTextOffset,
                                              y: -smallPlaceholderPadding,
                                              width: frame.width,
                                              height: font!.pointSize * 1.1)
         
-        separatorLineView.frame     = CGRect(x: separatorLeftPadding,
-                                             y: frame.height - separatorBottomPadding,
-                                             width: frame.width - separatorLeftPadding - separatorRightadding,
-                                             height: 1)
+        separatorLineView.frame = CGRect(x: separatorLeftPadding,
+                                         y: frame.height - separatorBottomPadding,
+                                         width: frame.width - separatorLeftPadding - separatorRightadding,
+                                         height: 1)
         
         hideSmallPlaceholder()
     }
@@ -151,7 +155,7 @@ import NotificationCenter
     fileprivate func setupObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(textFieldTextDidEndEditing), name: .UITextFieldTextDidEndEditing, object: self)
         NotificationCenter.default.addObserver(self, selector: #selector(textFieldTextDidBeginEditing), name: .UITextFieldTextDidBeginEditing, object: self)
-//        NotificationCenter.default.addObserver(self, selector: #selector(textFieldTextDidBeginEditing), name: .UITextFieldTextDidChange, object: self)
+        NotificationCenter.default.addObserver(self, selector: #selector(textFieldTextChanged), name: .UITextFieldTextDidChange, object: self)
     }
     
     fileprivate func setupSubviews() {
@@ -174,24 +178,44 @@ import NotificationCenter
         setPlaceholderColor(to: .clear)
     }
     
+    func textFieldTextChanged(notifcation: NSNotification) {
+        smallPlaceholderLabel.textColor = smallPlaceholderColor
+    }
+    
     // MARK: - Animations
+    
     fileprivate func hideSmallPlaceholder() {
-        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-            self.smallPlaceholderLabel.transform = CGAffineTransform(translationX: 0, y: self.smallPlaceholderLabel.frame.height)
-            self.smallPlaceholderLabel.alpha = 0
-        }, completion: nil)
+        if !isPlaceholderHidden {
+            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+                self.smallPlaceholderLabel.transform = CGAffineTransform(translationX: 0, y: self.smallPlaceholderLabel.frame.height)
+                self.smallPlaceholderLabel.alpha = 0
+            }) { (_) in
+                self.isPlaceholderHidden = !self.isPlaceholderHidden
+            }
+        }
     }
     
     fileprivate func showSmallPlaceholder() {
-        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-            self.smallPlaceholderLabel.transform = .identity
-            self.smallPlaceholderLabel.alpha = 1
-        }, completion: nil)
+        if isPlaceholderHidden {
+            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+                self.smallPlaceholderLabel.transform = .identity
+                self.smallPlaceholderLabel.alpha = 1
+            }) { (_) in
+                self.isPlaceholderHidden = !self.isPlaceholderHidden
+            }
+        }
     }
     
     // MARK: - Helpers
+    
     fileprivate func setPlaceholderColor(to: UIColor) {
         attributedPlaceholder = NSAttributedString(string: placeholder!, attributes: [NSForegroundColorAttributeName: to])
+    }
+    
+    public var wrongInputColor: UIColor = #colorLiteral(red: 0.9046222586, green: 0.06288693374, blue: 0.1854852713, alpha: 1)
+    
+    public func wrongInput() {
+        smallPlaceholderLabel.textColor = wrongInputColor
     }
     
 }

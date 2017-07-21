@@ -21,19 +21,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b7U-sm-rgI" customClass="YVTextField" customModule="YVTextField" customModuleProvider="target">
-                                <rect key="frame" x="28" y="137" width="319" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="28" y="137" width="319" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.36434948361543246" green="0.74057112068965525" blue="0.41616767344521649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="textColor" red="1" green="0.99760153652376704" blue="0.99776933576110016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="smallPlaceholder" value="First name"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="smallPlaceholderColor">
-                                        <color key="value" red="0.69086079124746147" green="0.88740260278514593" blue="0.51336409113995973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.51357386883474965" green="0.65967962533156499" blue="0.38162591617266406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" red="0.40497193022766914" green="0.8230686339522546" blue="0.46688633896518467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.32871914045798034" green="0.74933687002652527" blue="0.3223125129228106" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="separatorLineViewColor">
                                         <color key="value" red="0.14800776824575371" green="0.30081233421750664" blue="0.17063603646756184" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -48,28 +48,28 @@
                                         <real key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="smallPlaceholderPadding">
-                                        <real key="value" value="7"/>
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="separatorHidden" value="NO"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="leftTextOffset">
-                                        <real key="value" value="16"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your surname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bkA-sc-9fG" customClass="YVTextField" customModule="YVTextField" customModuleProvider="target">
-                                <rect key="frame" x="28" y="181" width="319" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="28" y="181" width="319" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.36434948360000002" green="0.74057112069999997" blue="0.41616767339999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="textColor" red="1" green="0.99760153650000005" blue="0.99776933580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="smallPlaceholder" value="Last name"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="smallPlaceholderColor">
-                                        <color key="value" red="0.69086079119999999" green="0.88740260280000005" blue="0.51336409110000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.51357386883474965" green="0.65967962533156499" blue="0.38162591617266406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" red="0.4049719302" green="0.82306863399999997" blue="0.46688633899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.32871914045798034" green="0.74933687002652527" blue="0.3223125129228106" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="separatorLineViewColor">
                                         <color key="value" red="0.1480077682" green="0.30081233419999998" blue="0.1706360365" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -84,19 +84,19 @@
                                         <real key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="smallPlaceholderPadding">
-                                        <real key="value" value="7"/>
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="separatorHidden" value="NO"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="leftTextOffset">
-                                        <real key="value" value="16"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Some fancy field" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lfF-aJ-4xd" customClass="YVTextField" customModule="YVTextField" customModuleProvider="target">
-                                <rect key="frame" x="28" y="240" width="259" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="28" y="240" width="319" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="smallPlaceholder" value="Your info"/>
@@ -104,12 +104,12 @@
                                         <real key="value" value="9"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="smallPlaceholderPadding">
-                                        <real key="value" value="18"/>
+                                        <real key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" red="0.94864697480070537" green="0.95763221153846156" blue="0.94815845975680368" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="jW6-LP-yds">
                         <nil key="title"/>
@@ -129,6 +129,7 @@
                         </view>
                     </navigationItem>
                     <connections>
+                        <outlet property="descriptionTF" destination="lfF-aJ-4xd" id="HF4-N1-wt5"/>
                         <outlet property="firstNameTF" destination="b7U-sm-rgI" id="DuL-Qs-Xea"/>
                         <outlet property="lastNameTF" destination="bkA-sc-9fG" id="OQd-je-c8u"/>
                     </connections>

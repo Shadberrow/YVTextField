@@ -12,6 +12,7 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var firstNameTF: YVTextField!
     @IBOutlet weak var lastNameTF: YVTextField!
+    @IBOutlet weak var descriptionTF: YVTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,7 @@ class MainViewController: UIViewController {
         
         firstNameTF.delegate = self
         lastNameTF.delegate = self
+        descriptionTF.delegate = self
         
     }
 
@@ -31,5 +33,9 @@ class MainViewController: UIViewController {
 
 
 extension MainViewController: UITextFieldDelegate {
-    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField.text! == "wrong" {
+            (textField as! YVTextField).wrongInput()
+        }
+    }
 }
