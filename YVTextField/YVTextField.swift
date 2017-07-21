@@ -82,6 +82,10 @@ class YVTextField: UITextField {
         smallPlaceholderLabel.frame = CGRect(x: leftTextOffset, y: -verticalPadding, width: frame.width, height: 14)
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     fileprivate func setupView() {
         clipsToBounds = false
         
