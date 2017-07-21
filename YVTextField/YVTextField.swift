@@ -79,12 +79,14 @@ class YVTextField: UITextField {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        smallPlaceholderLabel.frame = CGRect(x: leftTextOffset, y: -verticalPadding, width: frame.width, height: 14)
+        smallPlaceholderLabel.frame = CGRect(x: self.leftTextOffset, y: -self.verticalPadding, width: self.frame.width, height: 14)
     }
     
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
+    
+    // MARK: - Setup view
     
     fileprivate func setupView() {
         clipsToBounds = false
@@ -95,8 +97,8 @@ class YVTextField: UITextField {
     }
     
     fileprivate func setupObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(textFieldTextDidEndEditing), name: .UITextFieldTextDidEndEditing, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(textFieldTextDidBeginEditing), name: .UITextFieldTextDidBeginEditing, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(textFieldTextDidEndEditing), name: .UITextFieldTextDidEndEditing, object: self)
+        NotificationCenter.default.addObserver(self, selector: #selector(textFieldTextDidBeginEditing), name: .UITextFieldTextDidBeginEditing, object: self)
     }
     
     fileprivate func setupConstraints() {
