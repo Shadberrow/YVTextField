@@ -76,6 +76,32 @@ Than go to the `Attributes inspector` and you will see next:
 
 ## Customizing
 
+In general all customising properties are shown in example above.
+
+Here is the list of the all with default values:
+
+```swift
+public var smallPlaceholderText: String = ""
+public var smallPlaceholderColor: UIColor = .lightGray
+public var smallPlaceholderPadding: CGFloat = 7
+public var smallPlaceholderLeftOffset: CGFloat = 0
+public var placeholderColor: UIColor = .gray
+public var separatorLineViewColor: UIColor = .lightGray
+public var separatorLeftPadding: CGFloat = 0
+public var separatorRightPadding: CGFloat = 0
+public var separatorBottomPadding: CGFloat = 0
+public var separatorIsHidden: Bool = false
+public var cornerRadius: CGFloat = 0
+public var borderWidth: CGFloat = 0
+public var borderColor: UIColor =  .clear
+public var textLeftOffst: CGFloat = 0
+public var image: UIImage?
+public var isHighlightedOnEdit: Bool = false
+public var highlightedColor: UIColor = UIColor.red
+public var errorMessage: String?
+public var errorColor: UIColor = UIColor.red
+```
+
 ## Enable/disable highlighting
 
 You could change it directly from storyboard simply toggled `isHighlightedOnEdit` parameter to `off` to disable or `on` to enable highlighting.
