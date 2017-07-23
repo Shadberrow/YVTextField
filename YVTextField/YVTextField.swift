@@ -60,7 +60,7 @@ import NotificationCenter
     }
     
     /// Color of the separator line view
-    @IBInspectable public var separatorLineViewColor: UIColor = .black {
+    @IBInspectable public var separatorLineViewColor: UIColor = .lightGray {
         didSet {
             separatorLineView.backgroundColor = separatorLineViewColor
         }
@@ -96,8 +96,7 @@ import NotificationCenter
     
     @IBInspectable public var textLeftOffst: CGFloat = 0 {
         didSet {
-            let imageWidth = (imageSize != nil) ? imageSize!.width : 0
-            let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: textLeftOffst + imageWidth, height: frame.height))
+            let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: textLeftOffst, height: frame.height))
             leftView = paddingView
             leftViewMode = .always
         }
@@ -107,9 +106,13 @@ import NotificationCenter
         didSet {
             guard let image = image else { return }
             imageSize = CGSize(width: frame.height/2, height: frame.height/2)
+            textLeftOffst = imageSize!.height + 5
             setupImageView(with: image)
         }
     }
+    
+    @IBInspectable public var isHighlightedOnEdit: Bool = false
+    @IBInspectable public var highlightedColor: UIColor = .red
     
     // MARK: - Views
     
@@ -193,17 +196,30 @@ import NotificationCenter
             hideSmallPlaceholder()
             setPlaceholderColor(to: placeholderColor)
         }
+        if isHighlightedOnEdit {
+            smallPlaceholderLabel.textColor = smallPlaceholderColor
+            separatorLineView.backgroundColor = separatorLineViewColor
+            imageView?.tintColor = smallPlaceholderColor
+        }
     }
     
     func textFieldTextDidBeginEditing(notification : NSNotification) {
         showSmallPlaceholder()
         setPlaceholderColor(to: .clear)
+        if isHighlightedOnEdit {
+            smallPlaceholderLabel.textColor = highlightedColor
+            separatorLineView.backgroundColor = highlightedColor
+            imageView?.tintColor = highlightedColor
+        }
     }
     
     func textFieldTextChanged(notifcation: NSNotification) {
         if !(errorMessage != nil && !errorMessage!.isEmpty) {
             smallPlaceholderLabel.text = smallPlaceholderText
             smallPlaceholderLabel.textColor = smallPlaceholderColor
+            if isHighlightedOnEdit {
+                smallPlaceholderLabel.textColor = highlightedColor
+            }
         }
     }
     
@@ -249,8 +265,7 @@ import NotificationCenter
         imageView!.frame = CGRect(x: 0, y: frame.height/2 - imageSize.height/2, width: imageSize.width, height: imageSize.height)
         imageView!.image = with
         imageView!.contentMode = .scaleAspectFit
-        
-        textLeftOffst = textLeftOffst + imageSize.width
+        imageView!.tintColor = smallPlaceholderColor
         
         addSubview(imageView!)
     }

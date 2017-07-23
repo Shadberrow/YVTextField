@@ -20,114 +20,100 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b7U-sm-rgI" customClass="YVTextField" customModule="YVTextField" customModuleProvider="target">
-                                <rect key="frame" x="28" y="134" width="319" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.36434948361543246" green="0.74057112068965525" blue="0.41616767344521649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Js9-Ll-g2U" customClass="YVTextField" customModule="YVTextField" customModuleProvider="target">
+                                <rect key="frame" x="16" y="92" width="160" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="smallPlaceholder" value="First name"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="smallPlaceholderColor">
-                                        <color key="value" red="0.33333333329999998" green="0.50588235290000005" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHighlightedOnEdit" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                        <color key="value" red="0.33158763304136218" green="0.87860396998766743" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" red="0.7403978705406189" green="0.74416369199752808" blue="0.76348710060119629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="smallPlaceholderColor">
+                                        <color key="value" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="separatorLineViewColor">
-                                        <color key="value" red="0.14800776824575371" green="0.30081233421750664" blue="0.17063603646756184" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="separatorLeftPadding">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="separatorRightadding">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="separatorBottomPadding">
-                                        <real key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="smallPlaceholderPadding">
-                                        <real key="value" value="9"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="separatorHidden" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="leftTextOffset">
-                                        <real key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="smallPlaceholderText" value="First name"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="palette"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="smallPlaceholderLeftOffset">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="textLeftOffst">
-                                        <real key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your surname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bkA-sc-9fG" customClass="YVTextField" customModule="YVTextField" customModuleProvider="target">
-                                <rect key="frame" x="28" y="181" width="319" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.36434948360000002" green="0.74057112069999997" blue="0.41616767339999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="smallPlaceholder" value="Last name"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="smallPlaceholderColor">
-                                        <color key="value" red="0.33333333329999998" green="0.50588235290000005" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" red="0.7403978705406189" green="0.74416369199752808" blue="0.76348710060119629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="separatorLineViewColor">
-                                        <color key="value" red="0.1480077682" green="0.30081233419999998" blue="0.1706360365" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="separatorLeftPadding">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="separatorRightadding">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="separatorBottomPadding">
-                                        <real key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="smallPlaceholderPadding">
-                                        <real key="value" value="9"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="separatorHidden" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="leftTextOffset">
-                                        <real key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="smallPlaceholderText" value="Last name"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="smallPlaceholderText" value="Enter your first name"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="user"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="textLeftOffst">
-                                        <real key="value" value="8"/>
+                                        <real key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="smallPlaceholderLeftOffset">
-                                        <real key="value" value="0.0"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="separatorBottomPadding">
+                                        <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Some fancy field" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lfF-aJ-4xd" customClass="YVTextField" customModule="YVTextField" customModuleProvider="target">
-                                <rect key="frame" x="28" y="232" width="319" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oIQ-iG-zen" customClass="YVTextField" customModule="YVTextField" customModuleProvider="target">
+                                <rect key="frame" x="206" y="92" width="153" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="smallPlaceholder" value="Your info"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="separatorBottomPadding">
-                                        <real key="value" value="9"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHighlightedOnEdit" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                        <color key="value" red="0.33158763304136218" green="0.87860396998766743" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="smallPlaceholderPadding">
-                                        <real key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="smallPlaceholderText" value="About you"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="smallPlaceholderColor">
-                                        <color key="value" red="0.33333333329999998" green="0.50588235290000005" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="textLeftOffst">
-                                        <real key="value" value="0.0"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="separatorLineViewColor">
+                                        <color key="value" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="smallPlaceholderText" value="Enter your last name"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="separatorBottomPadding">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Meal" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L76-0g-5hU" customClass="YVTextField" customModule="YVTextField" customModuleProvider="target">
+                                <rect key="frame" x="16" y="143" width="160" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHighlightedOnEdit" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                        <color key="value" red="1" green="0.2023983295800782" blue="0.28074475608538763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="smallPlaceholderColor">
+                                        <color key="value" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="separatorLineViewColor">
+                                        <color key="value" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="smallPlaceholderText" value="Enter your favorite meal"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="separatorBottomPadding">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Height" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YPU-Fq-YQ6" customClass="YVTextField" customModule="YVTextField" customModuleProvider="target">
+                                <rect key="frame" x="206" y="143" width="153" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="smallPlaceholderColor">
+                                        <color key="value" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="separatorLineViewColor">
+                                        <color key="value" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="smallPlaceholderText" value="Enter your height"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="separatorBottomPadding">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHighlightedOnEdit" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="compass"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                        <color key="value" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
@@ -151,11 +137,6 @@
                             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                     </navigationItem>
-                    <connections>
-                        <outlet property="descriptionTF" destination="lfF-aJ-4xd" id="HF4-N1-wt5"/>
-                        <outlet property="firstNameTF" destination="b7U-sm-rgI" id="DuL-Qs-Xea"/>
-                        <outlet property="lastNameTF" destination="bkA-sc-9fG" id="OQd-je-c8u"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -181,7 +162,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="palette" width="20" height="16"/>
+        <image name="compass" width="20" height="20"/>
         <image name="user" width="20" height="19"/>
     </resources>
 </document>
