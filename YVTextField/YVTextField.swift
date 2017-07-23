@@ -47,7 +47,7 @@ import NotificationCenter
         }
     }
     
-    /// Width between textfield top and small separator top
+    /// Width between textfield top and smallseparator top
     @IBInspectable public var smallPlaceholderPadding: CGFloat = 7
     
     @IBInspectable public var smallPlaceholderLeftOffset: CGFloat = 0

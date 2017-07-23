@@ -57,6 +57,16 @@ Result:
 
 #### Storyboard
 
+Basic implementation:
+
+Drag and drop `UITextField` component to your storyboard.
+
+After that go to the component's `Identity inspector` and type `YVTextField` in Class block.
+
+Than go to the `Attributes inspector` and you will see next:
+
+![](https://github.com/Shadberrow/YVTextField/blob/master/YVTextField/Resources/Storyboard\ properties.png)
+
 ## Customizing
 
 ## Enable/disable highlighting
@@ -64,3 +74,4 @@ Result:
 ## Install (iOS 8+)
 
 Simply drag and drop [VTextField.swift](https://github.com/Shadberrow/YVTextField/blob/master/YVTextField/YVTextField.swift) to your project.
+

@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Js9-Ll-g2U" customClass="YVTextField" customModule="YVTextField" customModuleProvider="target">
-                                <rect key="frame" x="16" y="92" width="160" height="35"/>
+                                <rect key="frame" x="38" y="161" width="300" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -49,7 +49,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oIQ-iG-zen" customClass="YVTextField" customModule="YVTextField" customModuleProvider="target">
-                                <rect key="frame" x="206" y="92" width="153" height="35"/>
+                                <rect key="frame" x="38" y="208" width="300" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -57,13 +57,13 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHighlightedOnEdit" value="YES"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
-                                        <color key="value" red="0.33158763304136218" green="0.87860396998766743" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.68288917440318309" green="0.62792028368941333" blue="0.11960910267757775" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="smallPlaceholderColor">
-                                        <color key="value" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="value" red="0.30819234251976013" green="0.9191327691078186" blue="0.17441233992576599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="separatorLineViewColor">
-                                        <color key="value" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="value" red="0.99860399961471558" green="0.21444934606552124" blue="0.97744768857955933" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="smallPlaceholderText" value="Enter your last name"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="separatorBottomPadding">
@@ -72,7 +72,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Meal" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L76-0g-5hU" customClass="YVTextField" customModule="YVTextField" customModuleProvider="target">
-                                <rect key="frame" x="16" y="143" width="160" height="35"/>
+                                <rect key="frame" x="38" y="302" width="300" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -80,13 +80,13 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHighlightedOnEdit" value="YES"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
-                                        <color key="value" red="1" green="0.2023983295800782" blue="0.28074475608538763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.066973604261875153" green="0.26860573887825012" blue="0.84246253967285156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="smallPlaceholderColor">
-                                        <color key="value" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="value" red="0.51901745796203613" green="0.17106464505195618" blue="0.9305756688117981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="separatorLineViewColor">
-                                        <color key="value" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="value" red="0.99923330545425415" green="0.28257995843887329" blue="0.037858907133340836" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="smallPlaceholderText" value="Enter your favorite meal"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="separatorBottomPadding">
@@ -95,7 +95,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Height" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YPU-Fq-YQ6" customClass="YVTextField" customModule="YVTextField" customModuleProvider="target">
-                                <rect key="frame" x="206" y="143" width="153" height="35"/>
+                                <rect key="frame" x="38" y="255" width="300" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -116,6 +116,16 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
                                         <color key="value" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
                                     </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UgD-6M-Yc4" customClass="YVTextField" customModule="YVTextField" customModuleProvider="target">
+                                <rect key="frame" x="38" y="90" width="300" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="smallPlaceholderText" value="Enter your first name"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                         </subviews>

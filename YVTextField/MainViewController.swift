@@ -49,7 +49,7 @@ class MainViewController: UIViewController {
         tf.font = UIFont(name: "HelveticaNeue-Light", size: 17)
         tf.delegate = self
         
-        view.addSubview(tf)
+//        view.addSubview(tf)
         
     }
 
@@ -69,4 +69,3 @@ extension UIColor {
         self.init(red: CGFloat(hex>>16 & 0xFF)/255, green: CGFloat(hex>>8 & 0xFF)/255, blue: CGFloat(hex & 0xFF)/255, alpha: 1)
     }
 }
-
