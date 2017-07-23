@@ -7,11 +7,15 @@
 
 Custom UITextField written in Swift 3, XCode 8.3.
 
-iOS requirements: 8.0+
-
 Using a *floating label* textfield gives an opportunity to avoid additional information labels.
 
 The main advantage is that the user keeps the field’s context after they’ve focused and entered a value. This provides for a more accessible, less frustrating experience.
+
+## Requirements
+
+- iOS 8.0+
+- Xcode 8.1, 8.2, 8.3, and 9.0
+- Swift 3.0, 3.1, 3.2, and 4.0
 
 ## Features
 
