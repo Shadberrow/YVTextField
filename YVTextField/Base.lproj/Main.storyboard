@@ -101,16 +101,16 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="smallPlaceholderColor">
-                                        <color key="value" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="value" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="separatorLineViewColor">
-                                        <color key="value" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="value" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="smallPlaceholderText" value="Enter your height"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="separatorBottomPadding">
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHighlightedOnEdit" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHighlightedOnEdit" value="NO"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="compass"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
                                         <color key="value" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
