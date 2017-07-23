@@ -65,7 +65,7 @@ After that go to the component's `Identity inspector` and type `YVTextField` in 
 
 Than go to the `Attributes inspector` and you will see next:
 
-![](https://github.com/Shadberrow/YVTextField/blob/master/YVTextField/Resources/Storyboard\ properties.png)
+![](https://github.com/Shadberrow/YVTextField/blob/master/YVTextField/Resources/Storyboard%20properties.png)
 
 ## Customizing
 
