@@ -10,6 +10,9 @@ iOS requirements: 8.0+
 
 ## Features
 
+Using a *floating label* textfield gives an opportunity to avoid additional information labels. 
+Much cleaner experience\n
+The main advantage is that the user keeps the field’s context after they’ve focused and entered a value. This provides for a more accessible, less frustrating experience.
 
 ## Usage
 
