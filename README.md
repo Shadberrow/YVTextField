@@ -13,6 +13,8 @@ iOS requirements: 8.0+
 
 ## Usage
 
+# Programmatically
+
 ```swift
 // Initialization
 let tf = YVTextField()
@@ -52,6 +54,8 @@ view.addSubview(tf)
 Result:
 
 ![](https://github.com/Shadberrow/YVTextField/blob/master/YVTextField/Resources/gif1.gif)
+
+# Storyboard
 
 ## Customizing
 
