@@ -13,7 +13,7 @@ iOS requirements: 8.0+
 
 ## Usage
 
-# Programmatically
+#### Programmatically
 
 ```swift
 // Initialization
@@ -55,7 +55,7 @@ Result:
 
 ![](https://github.com/Shadberrow/YVTextField/blob/master/YVTextField/Resources/gif1.gif)
 
-# Storyboard
+#### Storyboard
 
 ## Customizing
 
