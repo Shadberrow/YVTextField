@@ -5,7 +5,7 @@
 
 ## Introduction
 
-Custom UITextField written in Swift 3, XCode 8.3.
+Custom UITextField written in Swift.
 
 Using a *floating label* textfield gives an opportunity to avoid additional information labels.
 
