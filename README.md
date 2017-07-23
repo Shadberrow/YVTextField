@@ -46,6 +46,9 @@ tf.placeholderColor = UIColor(red: 61/255, green: 172/255, blue: 247/255, alpha:
 
 view.addSubview(tf)
 ```
+Result:
+
+![](https://github.com/Shadberrow/YVTextField/blob/master/YVTextField/Resources/gif1.gif)
 
 ## Customizing
 
