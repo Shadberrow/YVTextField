@@ -71,6 +71,14 @@ Than go to the `Attributes inspector` and you will see next:
 
 ## Enable/disable highlighting
 
+You could change it directly from storyboard simply toggled `isHighlightedOnEdit` parameter to `off` to disable or `on` to enable highlighting.
+
+Or programmatically:
+
+```swift
+yourTextField.isHighlightedOnEdit = true // to enable
+yourTextField.isHighlightedOnEdit = true // to disable
+```
 ## Install (iOS 8+)
 
 Simply drag and drop [VTextField.swift](https://github.com/Shadberrow/YVTextField/blob/master/YVTextField/YVTextField.swift) to your project.

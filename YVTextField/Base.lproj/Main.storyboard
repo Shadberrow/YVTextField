@@ -124,9 +124,6 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="smallPlaceholderText" value="Enter your first name"/>
-                                </userDefinedRuntimeAttributes>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.94864697480070537" green="0.95763221153846156" blue="0.94815845975680368" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

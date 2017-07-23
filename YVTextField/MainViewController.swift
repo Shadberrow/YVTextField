@@ -49,6 +49,8 @@ class MainViewController: UIViewController {
         tf.font = UIFont(name: "HelveticaNeue-Light", size: 17)
         tf.delegate = self
         
+        tf.isHighlightedOnEdit = true
+        
 //        view.addSubview(tf)
         
     }
