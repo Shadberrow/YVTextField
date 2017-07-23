@@ -16,7 +16,7 @@ iOS requirements: 8.0+
 ```swift
 // Initialization
 let tf = YVTextField()
-tf.frame = CGRect(x: 60, y: 200, width: view.frame.width - 120, height: 30)
+tf.frame = CGRect(x: 60, y: 200, width: view.frame.width - 120, height: 40)
 
 // Setting highlighting functionality
 tf.isHighlightedOnEdit = true
