@@ -8,8 +8,8 @@
 Custom UITextField written in Swift.
 
 Using a *floating label* textfield gives an opportunity to avoid additional information labels.
-
-The main advantage is that the user keeps the field’s context after they’ve focused and entered a value. This provides for a more accessible, less frustrating experience.
+The main advantage is that the user keeps the field’s context after they’ve focused and entered a value.
+This provides for a more accessible, less frustrating experience.
 
 ## Requirements
 
@@ -82,7 +82,7 @@ Than go to the `Attributes inspector` and you will see next:
 
 ## Customizing
 
-In general all customising properties are shown in example above.
+In general all customising properties are shown in [example](#programmatically) above.
 
 Here is the list of the all with default values:
 
