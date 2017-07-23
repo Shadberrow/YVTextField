@@ -18,7 +18,9 @@ iOS requirements: 8.0+
 let tf = YVTextField()
 tf.frame = CGRect(x: 60, y: 200, width: view.frame.width - 120, height: 30)
 
+// Setting highlighting functionality
 tf.isHighlightedOnEdit = true
+tf.highlightedColor = .red
 
 // Setting up small placeholder
 tf.smallPlaceholderColor = UIColor(red: 61/255, green: 172/255, blue: 247/255, alpha: 1)
