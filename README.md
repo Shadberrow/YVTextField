@@ -77,7 +77,7 @@ Or programmatically:
 
 ```swift
 yourTextField.isHighlightedOnEdit = true // to enable
-yourTextField.isHighlightedOnEdit = true // to disable
+yourTextField.isHighlightedOnEdit = false // to disable
 ```
 ## Install (iOS 8+)
 
