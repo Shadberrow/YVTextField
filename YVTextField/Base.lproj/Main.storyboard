@@ -60,7 +60,7 @@
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="textLeftOffst">
-                                        <real key="value" value="25"/>
+                                        <real key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
@@ -101,7 +101,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="smallPlaceholderText" value="Last name"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="user"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="textLeftOffst">
-                                        <real key="value" value="25"/>
+                                        <real key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="smallPlaceholderLeftOffset">
                                         <real key="value" value="0.0"/>

@@ -67,12 +67,12 @@ import NotificationCenter
     }
     
     @IBInspectable public var separatorLeftPadding: CGFloat = 0
-    @IBInspectable public var separatorRightadding: CGFloat = 0
+    @IBInspectable public var separatorRightPadding: CGFloat = 0
     @IBInspectable public var separatorBottomPadding: CGFloat = 0
     
-    @IBInspectable public var separatorHidden: Bool = false {
+    @IBInspectable public var separatorIsHidden: Bool = false {
         didSet {
-            separatorLineView.isHidden = separatorHidden
+            separatorLineView.isHidden = separatorIsHidden
         }
     }
     
@@ -96,7 +96,8 @@ import NotificationCenter
     
     @IBInspectable public var textLeftOffst: CGFloat = 0 {
         didSet {
-            let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: textLeftOffst, height: frame.height))
+            let imageWidth = (imageSize != nil) ? imageSize!.width : 0
+            let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: textLeftOffst + imageWidth, height: frame.height))
             leftView = paddingView
             leftViewMode = .always
         }
@@ -123,7 +124,7 @@ import NotificationCenter
     fileprivate lazy var separatorLineView: UIView = {
         let view = UIView()
         view.backgroundColor = self.separatorLineViewColor
-        view.isHidden = self.separatorHidden
+        view.isHidden = self.separatorIsHidden
         return view
     }()
     
@@ -146,22 +147,18 @@ import NotificationCenter
         
         clipsToBounds = false
         
-        
-        if font == nil { return }
-        
-        smallPlaceholderFont = UIFont.systemFont(ofSize: font!.pointSize * 0.85)
-        
         smallPlaceholderLabel.frame = CGRect(x: smallPlaceholderLeftOffset,
                                              y: -smallPlaceholderPadding,
                                              width: frame.width,
-                                             height: font!.pointSize * 1.1)
+                                             height: smallPlaceholderFont.pointSize * 1.1)
         
         separatorLineView.frame = CGRect(x: separatorLeftPadding,
                                          y: frame.height - separatorBottomPadding,
-                                         width: frame.width - separatorLeftPadding - separatorRightadding,
+                                         width: frame.width - separatorLeftPadding - separatorRightPadding,
                                          height: 1)
         
         hideSmallPlaceholder()
+        
     }
     
     deinit {
@@ -238,6 +235,9 @@ import NotificationCenter
     // MARK: - Helpers
     
     fileprivate func setPlaceholderColor(to: UIColor) {
+        if placeholder == nil {
+            placeholder = " "
+        }
         attributedPlaceholder = NSAttributedString(string: placeholder!, attributes: [NSForegroundColorAttributeName: to])
     }
     
