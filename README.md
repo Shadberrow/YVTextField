@@ -84,7 +84,7 @@ Than go to the `Attributes inspector` and you will see next:
 
 In general all customising properties are shown in [example](#programmatically) above.
 
-Here is the list of the all with default values:
+Here is the list of them all with default values:
 
 ```swift
 public var smallPlaceholderText: String = ""
