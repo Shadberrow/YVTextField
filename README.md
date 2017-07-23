@@ -20,12 +20,12 @@ tf.frame = CGRect(x: 60, y: 200, width: view.frame.width - 120, height: 40)
 
 // Setting highlighting functionality
 tf.isHighlightedOnEdit = true
-tf.highlightedColor = .red
+tf.highlightedColor = UIColor(hex: 0xFF8766)
 
 // Setting up small placeholder
-tf.smallPlaceholderColor = UIColor(red: 61/255, green: 172/255, blue: 247/255, alpha: 1)
+tf.smallPlaceholderColor = UIColor(hex: 0xB26B58)
 tf.smallPlaceholderFont = UIFont.systemFont(ofSize: 12)
-tf.smallPlaceholderText = "Enter your information"
+tf.smallPlaceholderText = "Enter your first name"
 tf.smallPlaceholderPadding = 12
 tf.smallPlaceholderLeftOffset = 0
 
@@ -37,12 +37,15 @@ tf.separatorRightPadding = -8
 
 // Add image
 tf.image = #imageLiteral(resourceName: "user")
-tf.tintColor = UIColor(red: 243/255, green: 175/255, blue: 34/255, alpha: 1)
+tf.tintColor = UIColor(hex: 0x46B292)
 
-tf.textColor = UIColor(red: 243/255, green: 175/255, blue: 34/255, alpha: 1)
+// Customize placeholder
+tf.placeholder = "Your name"
+tf.placeholderColor = UIColor(hex: 0x422821)
+
+tf.textColor = UIColor(hex: 0x46B292)
+tf.font = UIFont(name: "HelveticaNeue-Light", size: 17)
 tf.delegate = self
-tf.placeholder = "Custom informtion"
-tf.placeholderColor = UIColor(red: 61/255, green: 172/255, blue: 247/255, alpha: 1)
 
 view.addSubview(tf)
 ```
