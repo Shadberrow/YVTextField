@@ -1,6 +1,7 @@
 # YVTextField
 
 [![Build Status](https://travis-ci.org/Shadberrow/YVTextField.svg?branch=master)](https://travis-ci.org/Shadberrow/YVTextField)
+[![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/Shadberrow)
 
 ## Introduction
 
