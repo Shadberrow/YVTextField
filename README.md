@@ -4,5 +4,6 @@
 
 ## Introduction
 
-Custom UITextField written on Swift 3, XCode 8.3
+Custom UITextField written on Swift 3, XCode 8.3.
+
 iOS requirements: 8.0+
