@@ -14,7 +14,9 @@ The main advantage is that the user keeps the field’s context after they’ve 
 
 ## Features
 
-Much cleaner experience
+⋅⋅*Much cleaner experience.
+
+⋅⋅*Flexible customization.
 
 ## Usage
 
