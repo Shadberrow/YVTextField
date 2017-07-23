@@ -227,24 +227,22 @@ import NotificationCenter
     
     fileprivate func hideSmallPlaceholder() {
         if !isPlaceholderHidden {
+            self.isPlaceholderHidden = !self.isPlaceholderHidden
             UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
                 let isNegative: CGFloat = (self.smallPlaceholderPadding < 0) ? -1 : 1
                 self.smallPlaceholderLabel.transform = CGAffineTransform(translationX: 0, y: self.smallPlaceholderLabel.frame.height * isNegative)
                 self.smallPlaceholderLabel.alpha = 0
-            }) { _ in
-                self.isPlaceholderHidden = !self.isPlaceholderHidden
-            }
+            })
         }
     }
     
     fileprivate func showSmallPlaceholder() {
         if isPlaceholderHidden {
+            self.isPlaceholderHidden = !self.isPlaceholderHidden
             UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
                 self.smallPlaceholderLabel.transform = .identity
                 self.smallPlaceholderLabel.alpha = 1
-            }) { _ in
-                self.isPlaceholderHidden = !self.isPlaceholderHidden
-            }
+            })
         }
     }
     
