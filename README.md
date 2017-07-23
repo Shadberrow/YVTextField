@@ -15,34 +15,34 @@ iOS requirements: 8.0+
 
 ```swift
 // Initialization
-        let tf = YVTextField()
-        tf.frame = CGRect(x: 60, y: 200, width: view.frame.width - 120, height: 30)
-        
-        tf.isHighlightedOnEdit = true
-        
-        // Setting up small placeholder
-        tf.smallPlaceholderColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-        tf.smallPlaceholderFont = UIFont.systemFont(ofSize: 12)
-        tf.smallPlaceholderText = "Enter your information"
-        tf.smallPlaceholderPadding = 12
-        tf.smallPlaceholderLeftOffset = 0
-        
-        // Settign up separator line
-        tf.separatorIsHidden = false
-        tf.separatorLineViewColor = tf.smallPlaceholderColor
-        tf.separatorLeftPadding = -8
-        tf.separatorRightPadding = -8
-        
-        // Add image
-        tf.image = #imageLiteral(resourceName: "user")
-        tf.tintColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
-        
-        tf.textColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
-        tf.delegate = self
-        tf.placeholder = "Custom informtion"
-        tf.placeholderColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-        
-        view.addSubview(tf)
+let tf = YVTextField()
+tf.frame = CGRect(x: 60, y: 200, width: view.frame.width - 120, height: 30)
+
+tf.isHighlightedOnEdit = true
+
+// Setting up small placeholder
+tf.smallPlaceholderColor = UIColor(red: 61/255, green: 172/255, blue: 247/255, alpha: 1)
+tf.smallPlaceholderFont = UIFont.systemFont(ofSize: 12)
+tf.smallPlaceholderText = "Enter your information"
+tf.smallPlaceholderPadding = 12
+tf.smallPlaceholderLeftOffset = 0
+
+// Settign up separator line
+tf.separatorIsHidden = false
+tf.separatorLineViewColor = tf.smallPlaceholderColor
+tf.separatorLeftPadding = -8
+tf.separatorRightPadding = -8
+
+// Add image
+tf.image = #imageLiteral(resourceName: "user")
+tf.tintColor = UIColor(red: 243/255, green: 175/255, blue: 34/255, alpha: 1)
+
+tf.textColor = UIColor(red: 243/255, green: 175/255, blue: 34/255, alpha: 1)
+tf.delegate = self
+tf.placeholder = "Custom informtion"
+tf.placeholderColor = UIColor(red: 61/255, green: 172/255, blue: 247/255, alpha: 1)
+
+view.addSubview(tf)
 ```
 
 ## Customizing
