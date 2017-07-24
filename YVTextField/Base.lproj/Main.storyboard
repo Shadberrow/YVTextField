@@ -21,12 +21,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nickname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Js9-Ll-g2U" customClass="YVTextField" customModule="YVTextField" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Js9-Ll-g2U" customClass="YVTextField" customModule="YVTextField" customModuleProvider="target">
                                 <rect key="frame" x="16" y="83" width="343" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHighlightedOnEdit" value="YES"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
@@ -38,8 +38,8 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="separatorLineViewColor">
                                         <color key="value" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="smallPlaceholderText" value="Enter your nickname"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="user"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="smallPlaceholderText" value="Enter your email"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="mail"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="textLeftOffst">
                                         <real key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
@@ -139,7 +139,7 @@
                         </view>
                     </navigationItem>
                     <connections>
-                        <outlet property="nicknameTF" destination="Js9-Ll-g2U" id="ovO-cL-Sbk"/>
+                        <outlet property="emailTF" destination="Js9-Ll-g2U" id="IwK-GL-F1l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -167,6 +167,6 @@
     </scenes>
     <resources>
         <image name="compass" width="20" height="20"/>
-        <image name="user" width="20" height="19"/>
+        <image name="mail" width="20" height="16"/>
     </resources>
 </document>

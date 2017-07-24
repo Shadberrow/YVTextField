@@ -11,14 +11,14 @@ import Foundation
 
 class MainViewController: UIViewController {
     
-    @IBOutlet weak var nicknameTF: YVTextField!
+    @IBOutlet weak var emailTF: YVTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(endEdit)))
 
-        nicknameTF.delegate = self
+        emailTF.delegate = self
         
         // Initialization
         let tf = YVTextField()
@@ -63,22 +63,46 @@ class MainViewController: UIViewController {
         view.endEditing(true)
     }
     
+    func isEmailValid(email: String) -> Bool {
+        var string = email
+        
+        if let lastCharacter = email.characters.last?.description {
+            if let unicodeValue = UnicodeScalar(lastCharacter) {
+                if !CharacterSet.letters.contains(unicodeValue) && !CharacterSet.decimalDigits.contains(unicodeValue) {
+                    string = string.substring(to: string.index(before: string.endIndex))
+                }
+            }
+        }
+        
+        
+        if !string.contains("@") { return false }
+        else if string.hasSuffix("gmail.com") { return true }
+        else if string.hasSuffix("bk.ru") { return true }
+        else if string.hasSuffix("outlook.com") { return true }
+        else if string.hasSuffix("icloud.com") { return true }
+        else { return false }
+    }
+    
 }
 
 
 extension MainViewController: UITextFieldDelegate {
     
-//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-//        if textField == nameTF {
-//            guard let text = textField.text else { return false }
-//            if text.characters.count < 4 {
-//                nameTF.errorMessage = "The first name must be at least 5 characters."
-//            } else {
-//                nameTF.errorMessage = nil
-//            }
-//        }
-//        return true
-//    }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == emailTF {
+            guard let email = textField.text else { return false }
+            let emailString = !(range.length == 1) ? email + string : email + "0"
+            emailTF.errorMessage = isEmailValid(email: emailString) ? nil : "The email must be valid email address"
+        }
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == emailTF {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
     
 //    func textFieldDidBeginEditing(_ textField: UITextField) {
 //        if textField == nameTF {
@@ -87,18 +111,18 @@ extension MainViewController: UITextFieldDelegate {
 //        }
 //    }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField == nicknameTF {
-            guard let text = textField.text else { return }
-            if text.characters.count < 5 {
-                nicknameTF.errorMessage = "The nickname must be at least 5 characters."
-            } else if text.characters.count > 30 {
-                nicknameTF.errorMessage = "The nickname may not be greater than 16 characters."
-            } else {
-                nicknameTF.errorMessage = nil
-            }
-        }
-    }
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        if textField == nicknameTF {
+//            guard let text = textField.text else { return }
+//            if text.characters.count < 5 {
+//                nicknameTF.errorMessage = "The nickname must be at least 5 characters."
+//            } else if text.characters.count > 30 {
+//                nicknameTF.errorMessage = "The nickname may not be greater than 16 characters."
+//            } else {
+//                nicknameTF.errorMessage = nil
+//            }
+//        }
+//    }
     
 }
 

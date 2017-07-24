@@ -2,4 +2,54 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YVTextField/YVTextField.swift"
+            timestampString = "522574102.67162"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "errorMessage"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YVTextField.YVTextField.init (frame : __C.CGRect) -&gt; YVTextField.YVTextField"
+                  moduleName = "YVTextField"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yevheniiveretennikov/Google%20Drive/Swift%20Dev/Projects/YVTextField/YVTextField/YVTextField.swift"
+                  timestampString = "522574234.849826"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "212">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YVTextField.YVTextField.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;YVTextField.YVTextField&gt;"
+                  moduleName = "YVTextField"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yevheniiveretennikov/Google%20Drive/Swift%20Dev/Projects/YVTextField/YVTextField/YVTextField.swift"
+                  timestampString = "522574234.851136"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "172">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
