@@ -144,6 +144,20 @@ As a result you have checked whether user entered fewer or more characters than 
 
 Or check input text while typing in `textField(_:shouldChangeCharactersIn:replacementString:)` method.
 ```swift
+func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    if textField == emailTF {
+        guard let email = textField.text else { return false }
+        emailTF.errorMessage = isEmailValid(email: email+string) ? nil : "The email must be valid email address"
+    }
+    return true
+}
+
+func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    if textField == emailTF {
+        textField.resignFirstResponder()
+    }
+    return true
+}
 ```
 ![](https://github.com/Shadberrow/YVTextField/blob/master/YVTextField/Resources/gif3.gif)
 
