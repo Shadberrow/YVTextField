@@ -18,7 +18,11 @@ import NotificationCenter
     
     public var errorMessage: String? {
         didSet {
-            if errorMessage!.isEmpty { return }
+            if errorMessage == nil || errorMessage!.isEmpty {
+                smallPlaceholderLabel.text = smallPlaceholderText
+                smallPlaceholderLabel.textColor = smallPlaceholderColor
+                return
+            }
             smallPlaceholderLabel.text = errorMessage
             smallPlaceholderLabel.textColor = errorColor
         }
@@ -153,7 +157,7 @@ import NotificationCenter
         smallPlaceholderLabel.frame = CGRect(x: smallPlaceholderLeftOffset,
                                              y: -smallPlaceholderPadding,
                                              width: frame.width,
-                                             height: smallPlaceholderFont.pointSize * 1.1)
+                                             height: smallPlaceholderFont.pointSize * 1.15)
         
         separatorLineView.frame = CGRect(x: separatorLeftPadding,
                                          y: frame.height - separatorBottomPadding,
@@ -192,6 +196,9 @@ import NotificationCenter
     
     func textFieldTextDidEndEditing(notification : NSNotification) {
         guard let text = text else { return }
+        if errorMessage != nil && !errorMessage!.isEmpty {
+            return
+        }
         if text.isEmpty {
             hideSmallPlaceholder()
             setPlaceholderColor(to: placeholderColor)
@@ -206,6 +213,7 @@ import NotificationCenter
     func textFieldTextDidBeginEditing(notification : NSNotification) {
         showSmallPlaceholder()
         setPlaceholderColor(to: .clear)
+        errorMessage = nil
         if isHighlightedOnEdit {
             smallPlaceholderLabel.textColor = highlightedColor
             separatorLineView.backgroundColor = highlightedColor

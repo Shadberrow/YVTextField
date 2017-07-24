@@ -11,10 +11,14 @@ import Foundation
 
 class MainViewController: UIViewController {
     
+    @IBOutlet weak var nicknameTF: YVTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(endEdit)))
+
+        nicknameTF.delegate = self
         
         // Initialization
         let tf = YVTextField()
@@ -63,7 +67,39 @@ class MainViewController: UIViewController {
 
 
 extension MainViewController: UITextFieldDelegate {
-    // do textfield delegate here
+    
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        if textField == nameTF {
+//            guard let text = textField.text else { return false }
+//            if text.characters.count < 4 {
+//                nameTF.errorMessage = "The first name must be at least 5 characters."
+//            } else {
+//                nameTF.errorMessage = nil
+//            }
+//        }
+//        return true
+//    }
+    
+//    func textFieldDidBeginEditing(_ textField: UITextField) {
+//        if textField == nameTF {
+//            guard let text = textField.text else { return }
+//            nameTF.errorMessage = nil
+//        }
+//    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == nicknameTF {
+            guard let text = textField.text else { return }
+            if text.characters.count < 5 {
+                nicknameTF.errorMessage = "The nickname must be at least 5 characters."
+            } else if text.characters.count > 30 {
+                nicknameTF.errorMessage = "The nickname may not be greater than 16 characters."
+            } else {
+                nicknameTF.errorMessage = nil
+            }
+        }
+    }
+    
 }
 
 extension UIColor {
