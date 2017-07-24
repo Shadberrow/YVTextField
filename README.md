@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Shadberrow/YVTextField.svg?branch=master)](https://travis-ci.org/Shadberrow/YVTextField)
 [![Twitter URL](https://img.shields.io/badge/twitter-@Shadberrow-blue.svg)](https://twitter.com/Shadberrow)
+[![Platform](https://img.shields.io/badge/platform-ios-lightgray.svg)](https://img.shields.io/badge/platform-ios-lightgray.svg)
 
 ## Introduction
 
