@@ -118,6 +118,30 @@ Or programmatically:
 yourTextField.isHighlightedOnEdit = true // to enable
 yourTextField.isHighlightedOnEdit = false // to disable
 ```
+## Wrong input handling
+
+For handling wrong input you have to implement `UITextFieldDelegate` methods simply assign in your `UIViewController`:
+```swift
+yourTextField.delegate = self
+```
+And than implement, for example, `textFieldDidEndEditing(_:)` method:
+```swift
+func textFieldDidEndEditing(_ textField: UITextField) {
+    if textField == nicknameTF {
+        guard let text = textField.text else { return }
+        if text.characters.count < 5 {
+            nicknameTF.errorMessage = "The nickname must be at least 5 characters."
+        } else if text.characters.count > 30 {
+            nicknameTF.errorMessage = "The nickname may not be greater than 35 characters."
+        } else {
+            nicknameTF.errorMessage = nil
+        }
+    }
+}
+```
+As a result you have checked whether user entered fewer or more characters than needed.
+![](https://github.com/Shadberrow/YVTextField/blob/master/YVTextField/Resources/gif2.gif)
+
 ## Install (iOS 8+)
 
 Simply drag and drop [VTextField.swift](https://github.com/Shadberrow/YVTextField/blob/master/YVTextField/YVTextField.swift) to your project.
