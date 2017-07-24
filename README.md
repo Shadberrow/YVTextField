@@ -120,7 +120,7 @@ yourTextField.isHighlightedOnEdit = false // to disable
 ```
 ## Wrong input handling
 
-For handling wrong input you have to implement `UITextFieldDelegate` methods simply assign in your `UIViewController`:
+For handling wrong input you have to implement `UITextFieldDelegate` methods, simply assign in your `UIViewController`:
 ```swift
 yourTextField.delegate = self
 ```
@@ -141,6 +141,11 @@ func textFieldDidEndEditing(_ textField: UITextField) {
 ```
 As a result you have checked whether user entered fewer or more characters than needed.
 ![](https://github.com/Shadberrow/YVTextField/blob/master/YVTextField/Resources/gif2.gif)
+
+Or check input text while typing in `textField(_:shouldChangeCharactersIn:replacementString:)` method.
+```swift
+```
+![](https://github.com/Shadberrow/YVTextField/blob/master/YVTextField/Resources/gif3.gif)
 
 ## Install (iOS 8+)
 
